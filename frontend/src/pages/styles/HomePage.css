@@ -86,7 +86,7 @@
 }
 
 .hero-eyebrow {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -98,7 +98,7 @@
 }
 
 .hero-text-panel h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
@@ -109,7 +109,7 @@
 }
 
 .hero-description {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
   color: var(--text-secondary);
@@ -167,7 +167,7 @@
 }
 
 .mosaic-overlay h4 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -175,7 +175,7 @@
 }
 
 .mosaic-overlay p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   opacity: 0.9;
@@ -214,7 +214,7 @@
 }
 
 .watermark-text {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(8rem, 20vw, 20rem);
   font-weight: 900;
   color: var(--black);
@@ -237,7 +237,7 @@
   border-radius: 50px;
   border: 2px solid var(--black);
   background: white;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -263,7 +263,7 @@
   padding: 0 24px;
   border-radius: 46px;
   border: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
@@ -292,7 +292,7 @@
   color: white;
   padding: 18px 32px;
   border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
@@ -333,7 +333,7 @@
 }
 
 .marquee-item {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -414,7 +414,7 @@
 }
 
 .categories-container h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-weight: 400;
   color: var(--black);
@@ -463,7 +463,7 @@
 }
 
 .category-text {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: var(--black);
@@ -496,7 +496,7 @@
 }
 
 .featured-container h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 400;
   color: var(--black);
@@ -505,7 +505,7 @@
 }
 
 .featured-container > p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   color: var(--text-secondary);
   text-align: center;
@@ -584,7 +584,7 @@
 }
 
 .empty-state p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   color: var(--text-secondary);
 }
@@ -647,7 +647,7 @@
 }
 
 .benefit-card h3 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--black);
@@ -655,7 +655,7 @@
 }
 
 .benefit-card p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -681,7 +681,7 @@
 }
 
 .trust-logo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -715,7 +715,7 @@
 }
 
 .newsletter-content h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: white;
@@ -723,7 +723,7 @@
 }
 
 .newsletter-content > p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
@@ -744,7 +744,7 @@
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.05);
   color: white;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -765,7 +765,7 @@
   color: var(--black);
   border: 2px solid var(--gold-main);
   border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;

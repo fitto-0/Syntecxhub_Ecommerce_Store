@@ -1,14 +1,14 @@
-import React from 'react';
-import { FiStar } from 'react-icons/fi';
-import './styles/ReviewsList.css';
+import React from "react";
+import { FiStar } from "react-icons/fi";
+import "./styles/ReviewsList.css";
 
 const ReviewsList = ({ reviews }) => {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
@@ -35,8 +35,7 @@ const ReviewsList = ({ reviews }) => {
                 <div className="reviewer-name">
                   {review.userId?.firstName && review.userId?.lastName
                     ? `${review.userId.firstName} ${review.userId.lastName}`
-                    : 'Anonymous User'
-                  }
+                    : "Anonymous User"}
                 </div>
                 <div className="review-date">
                   {formatDate(review.createdAt)}
@@ -48,8 +47,8 @@ const ReviewsList = ({ reviews }) => {
                   <FiStar
                     key={i}
                     size={16}
-                    fill={i < review.rating ? '#c9a24d' : 'none'}
-                    color={i < review.rating ? '#c9a24d' : '#e5e7eb'}
+                    fill={i < review.rating ? "#c9a24d" : "none"}
+                    color={i < review.rating ? "#c9a24d" : "#e5e7eb"}
                   />
                 ))}
               </div>

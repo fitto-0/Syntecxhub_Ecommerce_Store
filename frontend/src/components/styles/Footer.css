@@ -17,7 +17,7 @@
 }
 
 .footer-section h3 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 20px;
@@ -27,7 +27,7 @@
 }
 
 .footer-section p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
@@ -46,7 +46,7 @@
 
 .footer-section a {
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -93,7 +93,7 @@
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   color: white;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
 }
 
@@ -112,7 +112,7 @@
   color: #0e0e0e;
   border: 1px solid #c9a24d;
   border-radius: 8px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
@@ -137,7 +137,7 @@
 }
 
 .footer-bottom p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
@@ -151,7 +151,7 @@
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.6);
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   transition: all 0.3s ease;
   text-decoration: none;
