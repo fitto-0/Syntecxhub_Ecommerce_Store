@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { FiMenu, FiX, FiShoppingCart, FiUser } from 'react-icons/fi';
-import { useAuth } from '../hooks/useAuth';
-import { useCart } from '../hooks/useCart';
-import './styles/Navbar.css';
-import './styles/ProfileImage.css';
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FiMenu, FiX, FiShoppingCart, FiUser } from "react-icons/fi";
+import { useAuth } from "../hooks/useAuth";
+import { useCart } from "../hooks/useCart";
+import "./styles/Navbar.css";
+import "./styles/ProfileImage.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,16 +24,16 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   const handleLogout = async () => {
     await clearCart();
     logout();
-    navigate('/');
+    navigate("/");
     setIsDropdownOpen(false);
   };
 
@@ -45,9 +45,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="nav-content">
-         <Link to="/" className="logo">
+          <Link to="/" className="logo">
             <img src="/logo.png" alt="NOVA logo" className="logo-img" />
-         </Link>
+          </Link>
 
           <button
             className="menu-toggle"
@@ -56,7 +56,7 @@ const Navbar = () => {
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
 
-          <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <li>
               <Link to="/" onClick={() => setIsMenuOpen(false)}>
                 Home
@@ -77,33 +77,57 @@ const Navbar = () => {
           <div className="nav-actions">
             <Link to="/cart" className="cart-icon">
               <FiShoppingCart size={24} />
-              {cartCount > 0 && <span className="badge">{cartCount}</span>}
+              {cartCount > 0 && <span className="">{cartCount}</span>}
             </Link>
 
             {isAuthenticated ? (
               <div className="user-menu" ref={dropdownRef}>
                 <button className="user-btn" onClick={toggleDropdown}>
                   {user?.profileImage ? (
-                    <img 
-                      src={user.profileImage.startsWith('http') ? user.profileImage : `http://localhost:5000${user.profileImage}`} 
-                      alt="Profile" 
+                    <img
+                      src={
+                        user.profileImage.startsWith("http")
+                          ? user.profileImage
+                          : `http://localhost:5000${user.profileImage}`
+                      }
+                      alt="Profile"
                       className="profile-image"
                     />
                   ) : (
                     <FiUser size={24} />
                   )}
                 </button>
-                <div className={`dropdown ${isDropdownOpen ? 'active' : ''}`}>
-                  <p className="user-name">{user?.firstName} {user?.lastName}</p>
-                  {user?.role === 'admin' && (
-                    <Link to="/admin" onClick={() => {setIsMenuOpen(false); setIsDropdownOpen(false);}}>
+                <div className={`dropdown ${isDropdownOpen ? "active" : ""}`}>
+                  <p className="user-name">
+                    {user?.firstName} {user?.lastName}
+                  </p>
+                  {user?.role === "admin" && (
+                    <Link
+                      to="/admin"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       Admin Dashboard
                     </Link>
                   )}
-                  <Link to="/profile" onClick={() => {setIsMenuOpen(false); setIsDropdownOpen(false);}}>
+                  <Link
+                    to="/profile"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropdownOpen(false);
+                    }}
+                  >
                     Profile
                   </Link>
-                  <Link to="/orders" onClick={() => {setIsMenuOpen(false); setIsDropdownOpen(false);}}>
+                  <Link
+                    to="/orders"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropdownOpen(false);
+                    }}
+                  >
                     Orders
                   </Link>
                   <button onClick={handleLogout} className="logout-btn">

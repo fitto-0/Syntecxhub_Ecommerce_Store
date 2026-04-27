@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { FiStar, FiShoppingCart } from 'react-icons/fi';
 import { productService } from '../services/api';
 import { useCart } from '../hooks/useCart';
+import ReviewForm from '../components/ReviewForm';
+import ReviewsList from '../components/ReviewsList';
 import './styles/ProductDetailPage.css';
 
 // Utility function to convert relative paths to absolute URLs
@@ -22,6 +24,7 @@ const ProductDetailPage = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [mainImage, setMainImage] = useState(null);
+  const [reviews, setReviews] = useState([]);
   const { addToCart } = useCart();
 
   useEffect(() => {
@@ -33,6 +36,10 @@ const ProductDetailPage = () => {
         // Set the first image as the main image
         if (response.data.product.images && response.data.product.images.length > 0) {
           setMainImage(response.data.product.images[0]);
+        }
+        // Set reviews if available
+        if (response.data.product.reviews) {
+          setReviews(response.data.product.reviews);
         }
       } catch (err) {
         setError('Failed to load product');
@@ -54,6 +61,22 @@ const ProductDetailPage = () => {
       setError('Failed to add to cart');
     } finally {
       setAddingToCart(false);
+    }
+  };
+
+  const handleReviewSubmit = async (reviewData) => {
+    try {
+      await productService.addReview(product._id, reviewData);
+      // Refresh product data to get updated reviews
+      const response = await productService.getProductById(id);
+      setProduct(response.data.product);
+      if (response.data.product.reviews) {
+        setReviews(response.data.product.reviews);
+      }
+      setSuccess('Review submitted successfully!');
+      setTimeout(() => setSuccess(''), 3000);
+    } catch (err) {
+      setError('Failed to submit review');
     }
   };
 
@@ -148,6 +171,12 @@ const ProductDetailPage = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Reviews Section */}
+        <div className="reviews-section">
+          <ReviewForm productId={product._id} onReviewAdded={handleReviewSubmit} />
+          <ReviewsList reviews={reviews} />
         </div>
       </div>
     </div>

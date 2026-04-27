@@ -215,6 +215,19 @@ exports.addReview = async (req, res) => {
   try {
     const { rating, comment } = req.body;
 
+    // Validation
+    if (!rating || rating < 1 || rating > 5) {
+      return res.status(400).json({ success: false, message: 'Rating must be between 1 and 5' });
+    }
+
+    if (!comment || comment.trim().length === 0) {
+      return res.status(400).json({ success: false, message: 'Comment is required' });
+    }
+
+    if (!req.user || !req.user.id) {
+      return res.status(401).json({ success: false, message: 'User not authenticated' });
+    }
+
     const product = await Product.findById(req.params.id);
 
     if (!product) {
@@ -223,8 +236,8 @@ exports.addReview = async (req, res) => {
 
     const review = {
       userId: req.user.id,
-      rating,
-      comment,
+      rating: Number(rating),
+      comment: comment.trim(),
     };
 
     product.reviews.push(review);
@@ -242,6 +255,7 @@ exports.addReview = async (req, res) => {
       product,
     });
   } catch (error) {
+    console.error('Add review error:', error);
     res.status(400).json({ success: false, message: error.message });
   }
 };

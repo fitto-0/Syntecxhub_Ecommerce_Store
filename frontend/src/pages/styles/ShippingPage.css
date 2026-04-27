@@ -1,6 +1,6 @@
 .shipping-page {
   padding: 60px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: //linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);;
   min-height: 80vh;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .shipping-card.featured::before {
-  content: 'POPULAR';
+  content: "POPULAR";
   position: absolute;
   top: 12px;
   right: 24px;
@@ -126,7 +126,7 @@
 }
 
 .method-details li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #28a745;
@@ -168,7 +168,7 @@
 .feature-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: //linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);;
   border-radius: 50%;
   display: flex;
   align-items: center;

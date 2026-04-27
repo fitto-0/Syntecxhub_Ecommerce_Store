@@ -1,26 +1,25 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import ProductListPage from './pages/ProductListPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import CartPage from './pages/CartPage';
-import CheckoutPage from './pages/CheckoutPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import ProfilePage from './pages/ProfilePage';
-import OrderHistoryPage from './pages/OrderHistoryPage';
-import AdminPanel from './pages/AdminPanel';
-import ContactPage from './pages/ContactPage';
-import FAQPage from './pages/FAQPage';
-import ShippingPage from './pages/ShippingPage';
-import ReturnsPage from './pages/ReturnsPage';
-import NotFoundPage from './pages/NotFoundPage';
-import Iridescence from './pages/Iridescence';
-import './styles/global.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import { CartProvider } from "./context/CartContext";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ProductListPage from "./pages/ProductListPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ProfilePage from "./pages/ProfilePage";
+import OrderHistoryPage from "./pages/OrderHistoryPage";
+import AdminPanel from "./pages/AdminPanel";
+import ContactPage from "./pages/ContactPage";
+import FAQPage from "./pages/FAQPage";
+import ShippingPage from "./pages/ShippingPage";
+import ReturnsPage from "./pages/ReturnsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import "./styles/global.css";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
       <CartProvider>
         <Router>
           <div className="app">
-            
             <div className="content-wrapper">
               <Navbar />
               <main>
