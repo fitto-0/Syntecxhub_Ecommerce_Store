@@ -16,6 +16,7 @@ A modern, fully-featured e-commerce web application built with MongoDB, Express.
 ## ✨ Features
 
 ### User Side
+
 - **Product Browsing**: Modern grid layouts with product cards
 - **Search & Filtering**: Search, filter by category, and sort by price/rating
 - **Product Details**: Detailed product pages with image galleries
@@ -27,12 +28,14 @@ A modern, fully-featured e-commerce web application built with MongoDB, Express.
 - **Order Status Tracking**: Real-time order status updates
 
 ### Admin Dashboard
+
 - **Product Management**: Add, edit, and delete products
 - **Order Management**: View all orders and update order status
 - **Analytics Overview**: Dashboard with key metrics
 - **Inventory Management**: Monitor product stock levels
 
 ### Technical Features
+
 - **Responsive Design**: Fully responsive across all devices
 - **Modern UI/UX**: Clean, minimalist design with smooth animations
 - **Secure Authentication**: JWT-based authentication with password hashing
@@ -45,6 +48,7 @@ A modern, fully-featured e-commerce web application built with MongoDB, Express.
 ## 🛠 Tech Stack
 
 ### Backend
+
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web framework
 - **MongoDB** - NoSQL database
@@ -52,6 +56,7 @@ A modern, fully-featured e-commerce web application built with MongoDB, Express.
 - **bcryptjs** - Password hashing
 
 ### Frontend
+
 - **React** - UI library
 - **React Router** - Routing
 - **Axios** - HTTP client
@@ -126,6 +131,7 @@ ecommerce-website/
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas)
 - npm or yarn
@@ -133,21 +139,25 @@ ecommerce-website/
 ### Backend Setup
 
 1. Navigate to backend directory:
+
 ```bash
 cd backend
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create `.env` file:
+
 ```bash
 cp .env.example .env
 ```
 
 4. Configure your `.env` file:
+
 ```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ecommerce
@@ -159,16 +169,19 @@ NODE_ENV=development
 ### Frontend Setup
 
 1. Navigate to frontend directory:
+
 ```bash
 cd frontend
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create `.env` file (optional):
+
 ```
 REACT_APP_API_URL=http://localhost:5000/api
 ```
@@ -230,12 +243,14 @@ Application will open on `http://localhost:3000`
 ## 🗄 Database Schema
 
 ### User Model
+
 - firstName, lastName, email (unique), password (hashed)
 - phone, address (street, city, state, zipCode, country)
 - role (customer/admin), isActive
 - Timestamps (createdAt, updatedAt)
 
 ### Product Model
+
 - name, description, price, discountedPrice
 - category, stock, images array
 - rating, numberOfReviews, reviews array
@@ -243,10 +258,12 @@ Application will open on `http://localhost:3000`
 - Timestamps
 
 ### Cart Model
+
 - userId (unique), items array (productId, quantity, price)
 - totalPrice, timestamps
 
 ### Order Model
+
 - orderNumber (unique), userId, items array
 - shippingAddress, billingAddress
 - subtotal, shippingCost, tax, totalAmount
@@ -256,12 +273,14 @@ Application will open on `http://localhost:3000`
 ## 🎨 Features Overview
 
 ### Home Page
+
 - Hero section with call-to-action
 - Featured products showcase
 - Benefits section
 - Responsive design
 
 ### Product Listing
+
 - Grid layout with product cards
 - Search functionality
 - Category filtering
@@ -269,6 +288,7 @@ Application will open on `http://localhost:3000`
 - Pagination ready
 
 ### Product Detail
+
 - Full product information
 - Image gallery
 - Rating and reviews
@@ -276,6 +296,7 @@ Application will open on `http://localhost:3000`
 - Add to cart with quantity selector
 
 ### Shopping Cart
+
 - Product list with images
 - Quantity adjustment
 - Remove items
@@ -283,6 +304,7 @@ Application will open on `http://localhost:3000`
 - Checkout button
 
 ### Checkout
+
 - Multi-step checkout process
 - Shipping address
 - Billing address option
@@ -290,12 +312,14 @@ Application will open on `http://localhost:3000`
 - Order summary
 
 ### User Profile
+
 - Personal information editing
 - Address management
 - Recent orders view
 - Order history navigation
 
 ### Admin Dashboard
+
 - Dashboard overview with stats
 - Product management (add/edit/delete)
 - Order management
@@ -323,6 +347,7 @@ Application will open on `http://localhost:3000`
 ## 🚢 Deployment Ready
 
 The application is production-ready with:
+
 - Environment variable configuration
 - Error handling and logging
 - Optimized build process
@@ -345,6 +370,7 @@ The application is production-ready with:
 This project is configured for easy deployment to Vercel with a full-stack setup.
 
 ### Prerequisites
+
 - GitHub account
 - Vercel account
 - MongoDB database (Atlas recommended)
@@ -352,6 +378,7 @@ This project is configured for easy deployment to Vercel with a full-stack setup
 ### Deployment Steps
 
 1. **Push to GitHub**
+
    ```bash
    git add .
    git commit -m "Ready for deployment"
@@ -369,6 +396,7 @@ This project is configured for easy deployment to Vercel with a full-stack setup
 
 3. **Environment Variables**
    In Vercel dashboard → Project Settings → Environment Variables:
+
    ```
    MONGODB_URI=your_mongodb_atlas_connection_string
    JWT_SECRET=your_secure_jwt_secret_key
@@ -394,6 +422,7 @@ This project is configured for easy deployment to Vercel with a full-stack setup
 ### API Endpoints (Production)
 
 All API endpoints remain the same, accessible at `/api/*`:
+
 - `POST /api/auth/register` - Register user
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/me` - Get current user
