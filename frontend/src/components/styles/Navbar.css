@@ -181,7 +181,7 @@
   display: none;
 }
 
-.user-menu:hover .dropdown {
+.dropdown.active {
   display: block;
 }
 

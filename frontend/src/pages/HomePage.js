@@ -306,7 +306,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Trust Strip */}
+      {/* Trust Strip 
       <section className="trust-strip">
         <div className="trust-container">
           <div className="trust-logos">
@@ -317,7 +317,7 @@ const HomePage = () => {
             <div className="trust-logo">24/7 Support</div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Newsletter Section */}
       <section className="newsletter">

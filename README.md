@@ -340,6 +340,76 @@ The application is production-ready with:
 - Add email notifications for orders
 - Set up SSL/HTTPS for production
 
+## 🚀 Deployment to Vercel
+
+This project is configured for easy deployment to Vercel with a full-stack setup.
+
+### Prerequisites
+- GitHub account
+- Vercel account
+- MongoDB database (Atlas recommended)
+
+### Deployment Steps
+
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Deploy on Vercel**
+   - Go to [vercel.com](https://vercel.com) and sign in
+   - Click **"New Project"**
+   - Import your GitHub repository
+   - Vercel will auto-detect the multi-service setup:
+     - **Frontend**: Create React App in `frontend/`
+     - **Backend**: Express.js in `backend/`
+   - The `vercel.json` handles the routing automatically
+
+3. **Environment Variables**
+   In Vercel dashboard → Project Settings → Environment Variables:
+   ```
+   MONGODB_URI=your_mongodb_atlas_connection_string
+   JWT_SECRET=your_secure_jwt_secret_key
+   JWT_EXPIRE=30d
+   NODE_ENV=production
+   ```
+
+4. **Deploy**
+   - Click **"Deploy"**
+   - Wait for build completion
+   - Your site will be live!
+
+### Project Structure for Vercel
+
+```
+/ (root)
+├── frontend/          # React app (served by Vercel)
+├── backend/           # Express.js API (deployed as serverless)
+├── vercel.json        # Vercel configuration for multi-service
+└── .env.example       # Environment variables template
+```
+
+### API Endpoints (Production)
+
+All API endpoints remain the same, accessible at `/api/*`:
+- `POST /api/auth/register` - Register user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/me` - Get current user
+- `GET /api/products` - Get products
+- `GET /api/products/:id` - Get product details
+- `POST /api/products/:id/review` - Add product review
+- `GET /api/cart` - Get user cart
+- `POST /api/orders` - Create order
+
+### Troubleshooting
+
+- **Build fails**: Check `frontend/package.json` dependencies
+- **API errors**: Verify environment variables
+- **Database issues**: Ensure MongoDB URI is correct
+- **CORS problems**: Frontend automatically uses correct API URL
+
 ## 🤝 Contributing
 
 This is a learning project. Feel free to fork, modify, and improve!
